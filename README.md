@@ -1,4 +1,4 @@
-# Welcome to PowerDale
+# Welcome to Movie Booking System
 
 It's a simple movie booking system, written in Spring Boot
 
@@ -32,4 +32,7 @@ $ mvn spring-boot:start
 ```
 
 ## ERD
-https://raw.githubusercontent.com/thomsonimjd/moviereservation/master/move_erd.png
+![alt text](https://raw.githubusercontent.com/thomsonimjd/moviereservation/master/move_erd.png)
+
+## Swagger
+http://localhost:8091/swagger-ui.html
