@@ -55,7 +55,9 @@ public class BookingResource {
         if (!bookingService.existsByBookingId(bookingId))
             return new ResponseEntity<>("Booking got expired or invalid id", HttpStatus.BAD_REQUEST);
 
-        bookingService.confirmBookingStatus(bookingId);
+        boolean bookingStatus = bookingService.confirmBookingStatus(bookingId);
+        if(bookingStatus)
+            return new ResponseEntity<>("Booking got expired or invalid id", HttpStatus.BAD_REQUEST);
 
         return new ResponseEntity<>("Booking is confirmed", HttpStatus.OK);
     }

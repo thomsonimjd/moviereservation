@@ -67,9 +67,9 @@ public class BookingService {
     }
 
     @Transactional
-    public void confirmBookingStatus(UUID id) {
+    public boolean confirmBookingStatus(UUID id) {
         bookingRepository.updateBookingPaymentStatus(id, PaymentStatus.PAID);
-        bookingFinalizer.confirmBooking(id);
+        return bookingFinalizer.confirmBooking(id);
     }
 
     @Transactional
